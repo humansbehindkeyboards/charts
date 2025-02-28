@@ -13,6 +13,29 @@ Please note we have a code of conduct, please follow it in all your interactions
 | Feature/Issue | `feat/feature-name` or `fix/bug-name` | Always branch off HEAD of Working |
 | Hotfix | `hotfix/hotfix-name` | Always branch off Stable |
 
+## Content
+
+All the Helm Charts must be stored in the `charts/` directory, for instance:
+
+```diff
+  .
+  ├── .github
+  ├── charts/
++ │   ├── hello-world/
+  │   │   ├── templates
+  │   │   ├── Chart.yaml
+  │   │   └── values.yaml
+  │   └── ...
+  ├── README.md
+  ├── LICENSE
+  ├── CONTRIBUTING.md
+- └── my-helm-chart/
+      └── ...
+```
+
+- `hello-world` chart placed in `charts/` it's in the right location
+- `my-helm-chart` placed in the root it's in the wrong location
+
 ## Merge Request Process
 
 1. Ensure any install or build dependencies/values are removed before the end of the layer when doing a build.
